@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>SID_api.cpp</itemPath>
+    <itemPath>SID_api.h</itemPath>
+    <itemPath>SID_audio.cpp</itemPath>
+    <itemPath>SID_audio.h</itemPath>
+    <itemPath>SID_biome.cpp</itemPath>
+    <itemPath>SID_biome.h</itemPath>
+    <itemPath>SID_biome_paths.cpp</itemPath>
+    <itemPath>SID_biome_paths.h</itemPath>
+    <itemPath>SID_biomes.cpp</itemPath>
+    <itemPath>SID_biomes.h</itemPath>
+    <itemPath>SID_bits.h</itemPath>
+    <itemPath>SID_button.cpp</itemPath>
+    <itemPath>SID_button.h</itemPath>
+    <itemPath>SID_camera.cpp</itemPath>
+    <itemPath>SID_camera.h</itemPath>
+    <itemPath>SID_character.cpp</itemPath>
+    <itemPath>SID_character.h</itemPath>
+    <itemPath>SID_character_strip.cpp</itemPath>
+    <itemPath>SID_character_strip.h</itemPath>
+    <itemPath>SID_child.h</itemPath>
+    <itemPath>SID_chunk.cpp</itemPath>
+    <itemPath>SID_chunk.h</itemPath>
+    <itemPath>SID_chunks.cpp</itemPath>
+    <itemPath>SID_chunks.h</itemPath>
+    <itemPath>SID_control.cpp</itemPath>
+    <itemPath>SID_control.h</itemPath>
+    <itemPath>SID_display.cpp</itemPath>
+    <itemPath>SID_display.h</itemPath>
+    <itemPath>SID_draw_control.cpp</itemPath>
+    <itemPath>SID_draw_control.h</itemPath>
+    <itemPath>SID_draw_delegate.h</itemPath>
+    <itemPath>SID_draw_vbo.cpp</itemPath>
+    <itemPath>SID_draw_vbo.h</itemPath>
+    <itemPath>SID_environs.cpp</itemPath>
+    <itemPath>SID_environs.h</itemPath>
+    <itemPath>SID_euclid.cpp</itemPath>
+    <itemPath>SID_euclid.h</itemPath>
+    <itemPath>SID_event_calls.h</itemPath>
+    <itemPath>SID_file.cpp</itemPath>
+    <itemPath>SID_file.h</itemPath>
+    <itemPath>SID_font.cpp</itemPath>
+    <itemPath>SID_font.h</itemPath>
+    <itemPath>SID_fonts.cpp</itemPath>
+    <itemPath>SID_fonts.h</itemPath>
+    <itemPath>SID_forms.cpp</itemPath>
+    <itemPath>SID_forms.h</itemPath>
+    <itemPath>SID_frustum.cpp</itemPath>
+    <itemPath>SID_frustum.h</itemPath>
+    <itemPath>SID_globals.cpp</itemPath>
+    <itemPath>SID_globals.h</itemPath>
+    <itemPath>SID_height_map.cpp</itemPath>
+    <itemPath>SID_height_map.h</itemPath>
+    <itemPath>SID_interactive_object.cpp</itemPath>
+    <itemPath>SID_interactive_object.h</itemPath>
+    <itemPath>SID_keyboard.cpp</itemPath>
+    <itemPath>SID_keyboard.h</itemPath>
+    <itemPath>SID_layout.cpp</itemPath>
+    <itemPath>SID_layout.h</itemPath>
+    <itemPath>SID_menu_bar.cpp</itemPath>
+    <itemPath>SID_menu_bar.h</itemPath>
+    <itemPath>SID_mouse.cpp</itemPath>
+    <itemPath>SID_mouse.h</itemPath>
+    <itemPath>SID_object.cpp</itemPath>
+    <itemPath>SID_object.h</itemPath>
+    <itemPath>SID_object_ingame.cpp</itemPath>
+    <itemPath>SID_object_ingame.h</itemPath>
+    <itemPath>SID_object_template.cpp</itemPath>
+    <itemPath>SID_object_template.h</itemPath>
+    <itemPath>SID_object_templates.cpp</itemPath>
+    <itemPath>SID_object_templates.h</itemPath>
+    <itemPath>SID_parent.h</itemPath>
+    <itemPath>SID_perlin.cpp</itemPath>
+    <itemPath>SID_perlin.h</itemPath>
+    <itemPath>SID_plot.cpp</itemPath>
+    <itemPath>SID_plot.h</itemPath>
+    <itemPath>SID_plots.cpp</itemPath>
+    <itemPath>SID_plots.h</itemPath>
+    <itemPath>SID_radio_button.cpp</itemPath>
+    <itemPath>SID_radio_button.h</itemPath>
+    <itemPath>SID_rectangle_2d.cpp</itemPath>
+    <itemPath>SID_rectangle_2d.h</itemPath>
+    <itemPath>SID_rectangle_3d.cpp</itemPath>
+    <itemPath>SID_rectangle_3d.h</itemPath>
+    <itemPath>SID_regions.cpp</itemPath>
+    <itemPath>SID_regions.h</itemPath>
+    <itemPath>SID_render.cpp</itemPath>
+    <itemPath>SID_render.h</itemPath>
+    <itemPath>SID_select_3drect.cpp</itemPath>
+    <itemPath>SID_select_3drect.h</itemPath>
+    <itemPath>SID_select_delegate.cpp</itemPath>
+    <itemPath>SID_select_delegate.h</itemPath>
+    <itemPath>SID_select_vbo.cpp</itemPath>
+    <itemPath>SID_select_vbo.h</itemPath>
+    <itemPath>SID_sidof.cpp</itemPath>
+    <itemPath>SID_sidof.h</itemPath>
+    <itemPath>SID_sidofs.cpp</itemPath>
+    <itemPath>SID_sidofs.h</itemPath>
+    <itemPath>SID_structure.cpp</itemPath>
+    <itemPath>SID_structure.h</itemPath>
+    <itemPath>SID_texture.cpp</itemPath>
+    <itemPath>SID_texture.h</itemPath>
+    <itemPath>SID_textures.cpp</itemPath>
+    <itemPath>SID_textures.h</itemPath>
+    <itemPath>SID_timer.cpp</itemPath>
+    <itemPath>SID_timer.h</itemPath>
+    <itemPath>SID_toggle.cpp</itemPath>
+    <itemPath>SID_toggle.h</itemPath>
+    <itemPath>SID_tuplets.h</itemPath>
+    <itemPath>SID_user_events.cpp</itemPath>
+    <itemPath>SID_user_events.h</itemPath>
+    <itemPath>SID_vbo.cpp</itemPath>
+    <itemPath>SID_vbo.h</itemPath>
+    <itemPath>SID_vector3.cpp</itemPath>
+    <itemPath>SID_vector3.h</itemPath>
+    <itemPath>SID_vertex3.cpp</itemPath>
+    <itemPath>SID_vertex3.h</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <architecture>1</architecture>
+          <standard>8</standard>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../SID/dist/Debug/GNU-Linux-x86</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>SID</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-lSDL2_image -lSDL2_mixer `sdl2-config --cflags --libs`</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="SID_api.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_api.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_audio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biome.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biome.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biome_paths.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biome_paths.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biomes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biomes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_bits.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_camera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_character.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_character.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_character_strip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_character_strip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_child.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_chunk.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_chunk.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_chunks.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_chunks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_display.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_display.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_draw_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_delegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_draw_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_environs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_environs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_euclid.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_euclid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_event_calls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_font.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_font.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_fonts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_fonts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_forms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_forms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_frustum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_frustum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_globals.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_globals.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_height_map.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_height_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_interactive_object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_interactive_object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_keyboard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_keyboard.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_layout.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_layout.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_menu_bar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_menu_bar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_mouse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_mouse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_ingame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_ingame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_template.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_template.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_templates.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_templates.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_parent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_perlin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_perlin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_plot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_plot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_plots.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_plots.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_radio_button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_radio_button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_rectangle_2d.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_rectangle_2d.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_rectangle_3d.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_rectangle_3d.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_regions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_regions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_render.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_render.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_3drect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_3drect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_delegate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_delegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_sidof.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_sidof.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_sidofs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_sidofs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_structure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_structure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_texture.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_textures.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_textures.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_timer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_timer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_toggle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_toggle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_tuplets.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_user_events.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_user_events.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vector3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vector3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vertex3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vertex3.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>6</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <architecture>1</architecture>
+          <standard>8</standard>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sid</output>
+          <linkerAddLib>
+            <pElem>../SID/dist/Release/GNU-Linux-x86</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>SID</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-lSDL2_image -lSDL2_mixer `sdl2-config --cflags --libs`</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="SID_api.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_api.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_audio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biome.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biome.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biome_paths.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biome_paths.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_biomes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_biomes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_bits.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_camera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_character.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_character.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_character_strip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_character_strip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_child.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_chunk.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_chunk.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_chunks.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_chunks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_display.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_display.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_draw_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_delegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_draw_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_draw_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_environs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_environs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_euclid.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_euclid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_event_calls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_font.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_font.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_fonts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_fonts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_forms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_forms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_frustum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_frustum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_globals.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_globals.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_height_map.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_height_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_interactive_object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_interactive_object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_keyboard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_keyboard.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_layout.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_layout.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_menu_bar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_menu_bar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_mouse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_mouse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_ingame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_ingame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_template.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_template.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_object_templates.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_object_templates.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_parent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_perlin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_perlin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_plot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_plot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_plots.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_plots.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_radio_button.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_radio_button.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_rectangle_2d.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_rectangle_2d.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_rectangle_3d.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_rectangle_3d.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_regions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_regions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_render.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_render.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_3drect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_3drect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_delegate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_delegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_select_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_select_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_sidof.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_sidof.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_sidofs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_sidofs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_structure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_structure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_texture.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_textures.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_textures.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_timer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_timer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_toggle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_toggle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_tuplets.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_user_events.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_user_events.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vbo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vbo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vector3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vector3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SID_vertex3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SID_vertex3.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
