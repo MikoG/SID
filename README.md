@@ -1,6 +1,6 @@
 # SID
 
-SID is the Simple Indi Game Development Kit for C++. It is currently being developed for Linux but with extensive use of the SDL2 libraries there is scope to move into other platforms.
+SID is the Simple Indie Game Development Kit for C++. It is currently being developed for Linux but with extensive use of the SDL2 libraries there is scope to move into other platforms.
 
 SID aims to provide developers with a framework for implimenting menu systems and tile based 3d world to stage their game in.
 
