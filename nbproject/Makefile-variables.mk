@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=sid
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/sid
+CND_ARTIFACT_NAME_Debug=libSID.so
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/libSID.so
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=sid.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/sid.tar
+CND_PACKAGE_NAME_Debug=libSID.so.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/libSID.so.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=sid
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/sid
+CND_ARTIFACT_NAME_Release=libSID.so
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/libSID.so
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=sid.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/sid.tar
+CND_PACKAGE_NAME_Release=libSID.so.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/libSID.so.tar
 #
 # include compiler specific variables
 #

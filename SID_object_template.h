@@ -30,11 +30,14 @@ namespace sid {
         };
     public:
         object_template();
-        object_template(sid::sidof const* Sidof);
+        object_template(std::shared_ptr<sid::sido const> Sido);
         object_template(const object_template& orig);
+        object_template(object_template&& orig);
         virtual ~object_template();
-
-        void build_template(sid::sidof const* Sidof);
+        
+        object_template& operator=(const object_template& orig);
+        
+        void build_template();
 
         STATIC_STRING STR_OBJ_TYPE;
         STATIC_STRING STR_MIN_CREW;
@@ -48,13 +51,15 @@ namespace sid {
         STATIC_STRING STR_WIDTH;
         STATIC_STRING STR_LENGTH;
         STATIC_STRING STR_MAX_GRAD;
-        STATIC_STRING STR_LAND_ENBALED;
+        STATIC_STRING STR_LAND_ENABLED;
         STATIC_STRING STR_WATER_ENABLED;
         STATIC_STRING STR_MOUNTING_POINT;
         STATIC_STRING STR_VBO;
 
     private:
-        char __get_template_values(sid::sido const* ptr);
+        void __copy(const object_template& orig);
+        
+        char __get_template_values();
 
         char __get_vbo_params(sid::sido const* ptr,
                 int& primitive,
@@ -62,6 +67,8 @@ namespace sid {
                 int& normals_mode,
                 float& scale,
                 sid::t_vertset& center);
+
+        char __get_vbo_data(sid::vbo * const VBO);
 
         char __get_vbo_verts(sid::sido const* ptr,
                 sid::vbo * const VBO);
@@ -78,9 +85,43 @@ namespace sid {
         char __get_vbo_uv(sid::sido const* ptr,
                 sid::vbo * const VBO);
 
+        template<typename T>
+        T __get_int_val(std::string const& name) {
+            return __get_num_val<int, T>(name);
+        }
+        
+        template<typename T>
+        T __get_float_val(std::string const& name) {
+            return __get_num_val<float, T>(name);
+        }
+        
+        template<typename __Base, typename __Ret>
+        __Ret __get_num_val(std::string const& name) {
+            sid::t_variant varTemp;
+            __Base fTemp = 0;
+            __Ret tRetVal = 0;
+            if (__m_shptrSido->has_value(name)) {
+                varTemp = __m_shptrSido->get_value(name);
+                sid::get_val(fTemp, varTemp);
+                tRetVal = fTemp;
+            }
+            return tRetVal;
+        }
+
+        inline bool __get_bool_val(std::string const& name) {
+            sid::t_variant varTemp;
+            bool blRetVal = false;
+            if (__m_shptrSido->has_value(name)) {
+                varTemp = __m_shptrSido->get_value(name);
+                sid::get_val(blRetVal, varTemp);
+            }
+            return blRetVal;
+        }
+        
+        std::shared_ptr<sid::sido const> __m_shptrSido;
+        
         std::string __m_strName;
-        object_type __m_objType;
-        uchar __m_CrewCapacity;
+        uchar __m_objType;
         uchar __m_MinCrew;
         uchar __m_MaxCrew;
         uchar __m_HitPoints;

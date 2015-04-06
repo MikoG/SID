@@ -29,6 +29,10 @@ namespace sid {
         virtual ~child() {
 
         }
+        
+        child(child&& orig) {
+            
+        }
 
         inline virtual void set_parent(T parent) {
             this->__m_objParent = parent;

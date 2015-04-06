@@ -4,6 +4,67 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>SID_api.h</itemPath>
+      <itemPath>SID_audio.h</itemPath>
+      <itemPath>SID_biome.h</itemPath>
+      <itemPath>SID_biome_paths.h</itemPath>
+      <itemPath>SID_biomes.h</itemPath>
+      <itemPath>SID_bits.h</itemPath>
+      <itemPath>SID_button.h</itemPath>
+      <itemPath>SID_camera.h</itemPath>
+      <itemPath>SID_character.h</itemPath>
+      <itemPath>SID_character_strip.h</itemPath>
+      <itemPath>SID_child.h</itemPath>
+      <itemPath>SID_chunk.h</itemPath>
+      <itemPath>SID_chunks.h</itemPath>
+      <itemPath>SID_control.h</itemPath>
+      <itemPath>SID_display.h</itemPath>
+      <itemPath>SID_draw_control.h</itemPath>
+      <itemPath>SID_draw_delegate.h</itemPath>
+      <itemPath>SID_draw_vbo.h</itemPath>
+      <itemPath>SID_environs.h</itemPath>
+      <itemPath>SID_euclid.h</itemPath>
+      <itemPath>SID_event_calls.h</itemPath>
+      <itemPath>SID_file.h</itemPath>
+      <itemPath>SID_font.h</itemPath>
+      <itemPath>SID_fonts.h</itemPath>
+      <itemPath>SID_forms.h</itemPath>
+      <itemPath>SID_frustum.h</itemPath>
+      <itemPath>SID_globals.h</itemPath>
+      <itemPath>SID_height_map.h</itemPath>
+      <itemPath>SID_interactive_object.h</itemPath>
+      <itemPath>SID_keyboard.h</itemPath>
+      <itemPath>SID_layout.h</itemPath>
+      <itemPath>SID_menu_bar.h</itemPath>
+      <itemPath>SID_mouse.h</itemPath>
+      <itemPath>SID_object.h</itemPath>
+      <itemPath>SID_object_ingame.h</itemPath>
+      <itemPath>SID_object_template.h</itemPath>
+      <itemPath>SID_object_templates.h</itemPath>
+      <itemPath>SID_parent.h</itemPath>
+      <itemPath>SID_perlin.h</itemPath>
+      <itemPath>SID_plot.h</itemPath>
+      <itemPath>SID_plots.h</itemPath>
+      <itemPath>SID_radio_button.h</itemPath>
+      <itemPath>SID_rectangle_2d.h</itemPath>
+      <itemPath>SID_rectangle_3d.h</itemPath>
+      <itemPath>SID_regions.h</itemPath>
+      <itemPath>SID_render.h</itemPath>
+      <itemPath>SID_select_3drect.h</itemPath>
+      <itemPath>SID_select_delegate.h</itemPath>
+      <itemPath>SID_select_vbo.h</itemPath>
+      <itemPath>SID_sidof.h</itemPath>
+      <itemPath>SID_sidofs.h</itemPath>
+      <itemPath>SID_structure.h</itemPath>
+      <itemPath>SID_texture.h</itemPath>
+      <itemPath>SID_textures.h</itemPath>
+      <itemPath>SID_timer.h</itemPath>
+      <itemPath>SID_toggle.h</itemPath>
+      <itemPath>SID_tuplets.h</itemPath>
+      <itemPath>SID_user_events.h</itemPath>
+      <itemPath>SID_vbo.h</itemPath>
+      <itemPath>SID_vector3.h</itemPath>
+      <itemPath>SID_vertex3.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,6 +73,61 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>SID_api.cpp</itemPath>
+      <itemPath>SID_audio.cpp</itemPath>
+      <itemPath>SID_biome.cpp</itemPath>
+      <itemPath>SID_biome_paths.cpp</itemPath>
+      <itemPath>SID_biomes.cpp</itemPath>
+      <itemPath>SID_button.cpp</itemPath>
+      <itemPath>SID_camera.cpp</itemPath>
+      <itemPath>SID_character.cpp</itemPath>
+      <itemPath>SID_character_strip.cpp</itemPath>
+      <itemPath>SID_chunk.cpp</itemPath>
+      <itemPath>SID_chunks.cpp</itemPath>
+      <itemPath>SID_control.cpp</itemPath>
+      <itemPath>SID_display.cpp</itemPath>
+      <itemPath>SID_draw_control.cpp</itemPath>
+      <itemPath>SID_draw_vbo.cpp</itemPath>
+      <itemPath>SID_environs.cpp</itemPath>
+      <itemPath>SID_euclid.cpp</itemPath>
+      <itemPath>SID_file.cpp</itemPath>
+      <itemPath>SID_font.cpp</itemPath>
+      <itemPath>SID_fonts.cpp</itemPath>
+      <itemPath>SID_forms.cpp</itemPath>
+      <itemPath>SID_frustum.cpp</itemPath>
+      <itemPath>SID_globals.cpp</itemPath>
+      <itemPath>SID_height_map.cpp</itemPath>
+      <itemPath>SID_interactive_object.cpp</itemPath>
+      <itemPath>SID_keyboard.cpp</itemPath>
+      <itemPath>SID_layout.cpp</itemPath>
+      <itemPath>SID_menu_bar.cpp</itemPath>
+      <itemPath>SID_mouse.cpp</itemPath>
+      <itemPath>SID_object.cpp</itemPath>
+      <itemPath>SID_object_ingame.cpp</itemPath>
+      <itemPath>SID_object_template.cpp</itemPath>
+      <itemPath>SID_object_templates.cpp</itemPath>
+      <itemPath>SID_perlin.cpp</itemPath>
+      <itemPath>SID_plot.cpp</itemPath>
+      <itemPath>SID_plots.cpp</itemPath>
+      <itemPath>SID_radio_button.cpp</itemPath>
+      <itemPath>SID_rectangle_2d.cpp</itemPath>
+      <itemPath>SID_rectangle_3d.cpp</itemPath>
+      <itemPath>SID_regions.cpp</itemPath>
+      <itemPath>SID_render.cpp</itemPath>
+      <itemPath>SID_select_3drect.cpp</itemPath>
+      <itemPath>SID_select_delegate.cpp</itemPath>
+      <itemPath>SID_select_vbo.cpp</itemPath>
+      <itemPath>SID_sidof.cpp</itemPath>
+      <itemPath>SID_sidofs.cpp</itemPath>
+      <itemPath>SID_structure.cpp</itemPath>
+      <itemPath>SID_texture.cpp</itemPath>
+      <itemPath>SID_textures.cpp</itemPath>
+      <itemPath>SID_timer.cpp</itemPath>
+      <itemPath>SID_toggle.cpp</itemPath>
+      <itemPath>SID_user_events.cpp</itemPath>
+      <itemPath>SID_vbo.cpp</itemPath>
+      <itemPath>SID_vector3.cpp</itemPath>
+      <itemPath>SID_vertex3.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -23,146 +139,40 @@
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
+      <itemPath>README.md</itemPath>
     </logicalFolder>
-    <itemPath>SID_api.cpp</itemPath>
-    <itemPath>SID_api.h</itemPath>
-    <itemPath>SID_audio.cpp</itemPath>
-    <itemPath>SID_audio.h</itemPath>
-    <itemPath>SID_biome.cpp</itemPath>
-    <itemPath>SID_biome.h</itemPath>
-    <itemPath>SID_biome_paths.cpp</itemPath>
-    <itemPath>SID_biome_paths.h</itemPath>
-    <itemPath>SID_biomes.cpp</itemPath>
-    <itemPath>SID_biomes.h</itemPath>
-    <itemPath>SID_bits.h</itemPath>
-    <itemPath>SID_button.cpp</itemPath>
-    <itemPath>SID_button.h</itemPath>
-    <itemPath>SID_camera.cpp</itemPath>
-    <itemPath>SID_camera.h</itemPath>
-    <itemPath>SID_character.cpp</itemPath>
-    <itemPath>SID_character.h</itemPath>
-    <itemPath>SID_character_strip.cpp</itemPath>
-    <itemPath>SID_character_strip.h</itemPath>
-    <itemPath>SID_child.h</itemPath>
-    <itemPath>SID_chunk.cpp</itemPath>
-    <itemPath>SID_chunk.h</itemPath>
-    <itemPath>SID_chunks.cpp</itemPath>
-    <itemPath>SID_chunks.h</itemPath>
-    <itemPath>SID_control.cpp</itemPath>
-    <itemPath>SID_control.h</itemPath>
-    <itemPath>SID_display.cpp</itemPath>
-    <itemPath>SID_display.h</itemPath>
-    <itemPath>SID_draw_control.cpp</itemPath>
-    <itemPath>SID_draw_control.h</itemPath>
-    <itemPath>SID_draw_delegate.h</itemPath>
-    <itemPath>SID_draw_vbo.cpp</itemPath>
-    <itemPath>SID_draw_vbo.h</itemPath>
-    <itemPath>SID_environs.cpp</itemPath>
-    <itemPath>SID_environs.h</itemPath>
-    <itemPath>SID_euclid.cpp</itemPath>
-    <itemPath>SID_euclid.h</itemPath>
-    <itemPath>SID_event_calls.h</itemPath>
-    <itemPath>SID_file.cpp</itemPath>
-    <itemPath>SID_file.h</itemPath>
-    <itemPath>SID_font.cpp</itemPath>
-    <itemPath>SID_font.h</itemPath>
-    <itemPath>SID_fonts.cpp</itemPath>
-    <itemPath>SID_fonts.h</itemPath>
-    <itemPath>SID_forms.cpp</itemPath>
-    <itemPath>SID_forms.h</itemPath>
-    <itemPath>SID_frustum.cpp</itemPath>
-    <itemPath>SID_frustum.h</itemPath>
-    <itemPath>SID_globals.cpp</itemPath>
-    <itemPath>SID_globals.h</itemPath>
-    <itemPath>SID_height_map.cpp</itemPath>
-    <itemPath>SID_height_map.h</itemPath>
-    <itemPath>SID_interactive_object.cpp</itemPath>
-    <itemPath>SID_interactive_object.h</itemPath>
-    <itemPath>SID_keyboard.cpp</itemPath>
-    <itemPath>SID_keyboard.h</itemPath>
-    <itemPath>SID_layout.cpp</itemPath>
-    <itemPath>SID_layout.h</itemPath>
-    <itemPath>SID_menu_bar.cpp</itemPath>
-    <itemPath>SID_menu_bar.h</itemPath>
-    <itemPath>SID_mouse.cpp</itemPath>
-    <itemPath>SID_mouse.h</itemPath>
-    <itemPath>SID_object.cpp</itemPath>
-    <itemPath>SID_object.h</itemPath>
-    <itemPath>SID_object_ingame.cpp</itemPath>
-    <itemPath>SID_object_ingame.h</itemPath>
-    <itemPath>SID_object_template.cpp</itemPath>
-    <itemPath>SID_object_template.h</itemPath>
-    <itemPath>SID_object_templates.cpp</itemPath>
-    <itemPath>SID_object_templates.h</itemPath>
-    <itemPath>SID_parent.h</itemPath>
-    <itemPath>SID_perlin.cpp</itemPath>
-    <itemPath>SID_perlin.h</itemPath>
-    <itemPath>SID_plot.cpp</itemPath>
-    <itemPath>SID_plot.h</itemPath>
-    <itemPath>SID_plots.cpp</itemPath>
-    <itemPath>SID_plots.h</itemPath>
-    <itemPath>SID_radio_button.cpp</itemPath>
-    <itemPath>SID_radio_button.h</itemPath>
-    <itemPath>SID_rectangle_2d.cpp</itemPath>
-    <itemPath>SID_rectangle_2d.h</itemPath>
-    <itemPath>SID_rectangle_3d.cpp</itemPath>
-    <itemPath>SID_rectangle_3d.h</itemPath>
-    <itemPath>SID_regions.cpp</itemPath>
-    <itemPath>SID_regions.h</itemPath>
-    <itemPath>SID_render.cpp</itemPath>
-    <itemPath>SID_render.h</itemPath>
-    <itemPath>SID_select_3drect.cpp</itemPath>
-    <itemPath>SID_select_3drect.h</itemPath>
-    <itemPath>SID_select_delegate.cpp</itemPath>
-    <itemPath>SID_select_delegate.h</itemPath>
-    <itemPath>SID_select_vbo.cpp</itemPath>
-    <itemPath>SID_select_vbo.h</itemPath>
-    <itemPath>SID_sidof.cpp</itemPath>
-    <itemPath>SID_sidof.h</itemPath>
-    <itemPath>SID_sidofs.cpp</itemPath>
-    <itemPath>SID_sidofs.h</itemPath>
-    <itemPath>SID_structure.cpp</itemPath>
-    <itemPath>SID_structure.h</itemPath>
-    <itemPath>SID_texture.cpp</itemPath>
-    <itemPath>SID_texture.h</itemPath>
-    <itemPath>SID_textures.cpp</itemPath>
-    <itemPath>SID_textures.h</itemPath>
-    <itemPath>SID_timer.cpp</itemPath>
-    <itemPath>SID_timer.h</itemPath>
-    <itemPath>SID_toggle.cpp</itemPath>
-    <itemPath>SID_toggle.h</itemPath>
-    <itemPath>SID_tuplets.h</itemPath>
-    <itemPath>SID_user_events.cpp</itemPath>
-    <itemPath>SID_user_events.h</itemPath>
-    <itemPath>SID_vbo.cpp</itemPath>
-    <itemPath>SID_vbo.h</itemPath>
-    <itemPath>SID_vector3.cpp</itemPath>
-    <itemPath>SID_vector3.h</itemPath>
-    <itemPath>SID_vertex3.cpp</itemPath>
-    <itemPath>SID_vertex3.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Debug" type="1">
+    <conf name="Debug" type="2">
       <toolsSet>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <architecture>1</architecture>
+          <standard>10</standard>
+        </cTool>
         <ccTool>
           <architecture>1</architecture>
           <standard>8</standard>
+          <preprocessorList>
+            <Elem>DEBUG</Elem>
+          </preprocessorList>
           <warningLevel>3</warningLevel>
         </ccTool>
         <linkerTool>
-          <linkerAddLib>
-            <pElem>../SID/dist/Debug/GNU-Linux-x86</pElem>
-          </linkerAddLib>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSID.${CND_DLIB_EXT}</output>
           <linkerLibItems>
-            <linkerLibLibItem>SID</linkerLibLibItem>
+            <linkerOptionItem>`pkg-config --libs gl`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs glu`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs sdl2`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs SDL2_image`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs SDL2_mixer`</linkerOptionItem>
           </linkerLibItems>
-          <commandLine>-lSDL2_image -lSDL2_mixer `sdl2-config --cflags --libs`</commandLine>
+          <commandLine>`sdl2-config --cflags --libs`</commandLine>
         </linkerTool>
       </compileType>
       <item path="SID_api.cpp" ex="false" tool="1" flavor2="0">
@@ -398,7 +408,7 @@
       <item path="SID_vertex3.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
-    <conf name="Release" type="1">
+    <conf name="Release" type="2">
       <toolsSet>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
@@ -407,6 +417,8 @@
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <architecture>1</architecture>
+          <standard>10</standard>
         </cTool>
         <ccTool>
           <developmentMode>6</developmentMode>
@@ -422,14 +434,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
-          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sid</output>
-          <linkerAddLib>
-            <pElem>../SID/dist/Release/GNU-Linux-x86</pElem>
-          </linkerAddLib>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSID.${CND_DLIB_EXT}</output>
           <linkerLibItems>
-            <linkerLibLibItem>SID</linkerLibLibItem>
+            <linkerOptionItem>`pkg-config --libs gl`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs glu`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs sdl2`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs SDL2_image`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs SDL2_mixer`</linkerOptionItem>
           </linkerLibItems>
-          <commandLine>-lSDL2_image -lSDL2_mixer `sdl2-config --cflags --libs`</commandLine>
+          <commandLine>`sdl2-config --cflags --libs`</commandLine>
         </linkerTool>
       </compileType>
       <item path="SID_api.cpp" ex="false" tool="1" flavor2="0">

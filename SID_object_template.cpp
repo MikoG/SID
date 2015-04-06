@@ -7,58 +7,144 @@
 
 #include "SID_object_template.h"
 
-STATIC_STRING_DEF::STR_OBJ_TYPE = "type";
-STATIC_STRING_DEF::STR_MIN_CREW = "min_crew";
-STATIC_STRING_DEF::STR_MAX_CREW = "max_crew";
-STATIC_STRING_DEF::STR_HITPOINTS = "hitpoints";
-STATIC_STRING_DEF::STR_SHIELDPOINTS = "shieldpoints";
-STATIC_STRING_DEF::STR_WEPONS_SLOTS = "weapon_slots";
-STATIC_STRING_DEF::STR_MASS = "mass";
-STATIC_STRING_DEF::STR_FORCE = "force";
-STATIC_STRING_DEF::STR_TRACTION = "traction";
-STATIC_STRING_DEF::STR_WIDTH = "width";
-STATIC_STRING_DEF::STR_LENGTH = "length";
-STATIC_STRING_DEF::STR_MAX_GRAD = "max_gradient";
-STATIC_STRING_DEF::STR_LAND_ENBALED = "land_enabled";
-STATIC_STRING_DEF::STR_WATER_ENABLED = "water_enabled";
+STATIC_STRING_DEF::STR_OBJ_TYPE       = "type";
+STATIC_STRING_DEF::STR_MIN_CREW       = "min_crew";
+STATIC_STRING_DEF::STR_MAX_CREW       = "max_crew";
+STATIC_STRING_DEF::STR_HITPOINTS      = "hitpoints";
+STATIC_STRING_DEF::STR_SHIELDPOINTS   = "shieldpoints";
+STATIC_STRING_DEF::STR_WEPONS_SLOTS   = "weapon_slots";
+STATIC_STRING_DEF::STR_MASS           = "mass";
+STATIC_STRING_DEF::STR_FORCE          = "force";
+STATIC_STRING_DEF::STR_TRACTION       = "traction";
+STATIC_STRING_DEF::STR_WIDTH          = "width";
+STATIC_STRING_DEF::STR_LENGTH         = "length";
+STATIC_STRING_DEF::STR_MAX_GRAD       = "max_gradient";
+STATIC_STRING_DEF::STR_LAND_ENABLED   = "land_enabled";
+STATIC_STRING_DEF::STR_WATER_ENABLED  = "water_enabled";
 STATIC_STRING_DEF::STR_MOUNTING_POINT = "mounting_point";
-STATIC_STRING_DEF::STR_VBO = "vbo";
+STATIC_STRING_DEF::STR_VBO            = "vbo";
 
-sid::object_template::object_template() {
+sid::object_template::object_template() : 
+__m_VBO(new sid::vbo()) {
 }
 
-sid::object_template::object_template(const sid::sidof* Sidof) {
-    build_template(Sidof);
+sid::object_template::object_template(std::shared_ptr<sid::sido const> Sido) : 
+__m_VBO(new sid::vbo()) {    
+
+    this->__m_shptrSido = Sido;
+    build_template();
 }
 
-sid::object_template::object_template(const object_template& orig) {
+sid::object_template::object_template(const object_template& orig) :
+__m_VBO(orig.__m_VBO) {
+}
+
+sid::object_template::object_template(object_template&& orig) : 
+child(std::move(orig))  {
+    
 }
 
 sid::object_template::~object_template() {
+    if (this->__m_VBO)
+        delete this->__m_VBO;
 }
 
-void sid::object_template::build_template(sid::sidof const* Sidof) {
-    sid::vbo* vboTemp = new sid::vbo();
-    sid::sido const* sidoMesh;
+sid::object_template& sid::object_template::operator =(const object_template& orig) {
+    this->__copy(orig);
+    return *this;
+}
 
-    std::string strModel = "model";
-    std::string strParams = "params";
-    std::string strMesh = "mesh";
+void sid::object_template::__copy(const object_template& orig) {
+        this->__m_shptrSido = orig.__m_shptrSido;
+        this->__m_strName = orig.__m_strName;
+        this-> __m_objType = orig.__m_objType;
+        this->__m_MinCrew = orig.__m_MinCrew;
+        this->__m_MaxCrew = orig.__m_MaxCrew;
+        this->__m_HitPoints = orig.__m_HitPoints;
+        this->__m_ShieldPoints = orig.__m_ShieldPoints;
+        this->__m_WeaponsSlots = orig.__m_WeaponsSlots;
+        this->__m_Mass = orig.__m_Mass;
+        this->__m_Force = orig.__m_Force;
+        this->__m_Traction = orig.__m_Traction;
+        this->__m_Width = orig.__m_Width;
+        this->__m_Length = orig.__m_Length;
+        this->__m_MaxGradient = orig.__m_MaxGradient;
+        this->__m_LandEnabled = orig.__m_LandEnabled;
+        this->__m_WaterEnabled = orig.__m_WaterEnabled;
+        this->__m_MountingPoint = orig.__m_MountingPoint;
+        *this->__m_VBO = *orig.__m_VBO;
+}
 
-    int vboid;
-    int iPrimitive;
-    int iColorMode;
-    int iNormalsMode;
-    float fScale;
-    sid::t_vertset vertCenter;
-    std::vector<sid::t_vertset> vVertMesh;
-    std::vector<sid::t_index> vIndices;
-    std::vector<sid::t_color> vColors;
-    std::vector<sid::t_uv> vUV;
+void sid::object_template::build_template() {
+    this->__get_template_values();
+    
+    this->__get_vbo_data(this->__m_VBO);
+    
+    if (this->__m_shptrSido->has_child("sub_models")) {
+        sid::sido const* sidoSubTemplates = &(*this->__m_shptrSido)["sub_models"];
+        std::cout << sidoSubTemplates->get_name() << std::endl;
+        for(int iii = 0; iii < sidoSubTemplates->size(); ++iii) {
+            
+        }
+    }
+}
 
-    sid::sido const* Sido;
-    t_variant varTemp;
+char sid::object_template::__get_template_values() {
+    this->__m_strName = this->__m_shptrSido->get_name();
+    
+    this->__m_objType = this->__get_int_val<uchar>(STR_OBJ_TYPE);
+    this->__m_MinCrew = this->__get_int_val<uchar>(STR_MIN_CREW);
+    this->__m_MaxCrew = this->__get_int_val<uchar>(STR_MAX_CREW);
+    this->__m_HitPoints = this->__get_int_val<uchar>(STR_HITPOINTS);
+    this->__m_ShieldPoints = this->__get_int_val<uchar>(STR_SHIELDPOINTS);
+    this->__m_WeaponsSlots = this->__get_int_val<uchar>(STR_WEPONS_SLOTS);
+    
+    this->__m_Mass = this->__get_float_val<float>(STR_MASS);
+    this->__m_Force = this->__get_float_val<float>(STR_FORCE);
+    this->__m_Traction = this->__get_float_val<float>(STR_TRACTION);
+    this->__m_Width = this->__get_float_val<float>(STR_WIDTH);
+    this->__m_Length = this->__get_float_val<float>(STR_LENGTH);
+    this->__m_MaxGradient = this->__get_float_val<float>(STR_MAX_GRAD);
+    
+    this->__m_LandEnabled = this->__get_bool_val(STR_LAND_ENABLED);
+    this->__m_WaterEnabled = this->__get_bool_val(STR_WATER_ENABLED);
+    
+#ifdef DEBUG
+    std::cout << std::endl;
+    std::cout << "Object: " << this->__m_strName << std::endl;
+    std::cout << "Type: " << static_cast<int>(this->__m_objType) << std::endl;
+    std::cout << "Min Crew: " << static_cast<int>(this->__m_MinCrew) << std::endl;
+    std::cout << "Max Crew: " << static_cast<int>(this->__m_MaxCrew) << std::endl;
+    std::cout << "Hit Points: " << static_cast<int>(this->__m_HitPoints) << std::endl;
+    std::cout << "Shield Points: " << static_cast<int>(this->__m_ShieldPoints) << std::endl;
+    
+    std::cout << "Mass: " << this->__m_Mass << std::endl;
+    std::cout << "Force: " << this->__m_Force << std::endl;
+    std::cout << "Traction: " << this->__m_Traction << std::endl;
+    std::cout << "Width: " << this->__m_Width << std::endl;
+    std::cout << "Length: " << this->__m_Length << std::endl;
+    std::cout << "Max Gradient: " << this->__m_MaxGradient << std::endl;
+    
+    std::cout << std::boolalpha;
+    std::cout << "Land: " << this->__m_LandEnabled << std::endl;
+    std::cout << "Water: " << this->__m_WaterEnabled << std::endl;
+    std::cout << std::noboolalpha;
+    
+    const int LINEWIDTH = 60;
+    char hr[LINEWIDTH + 1];
+    int iii = 0;
+    while (iii < LINEWIDTH) {
+        hr[iii] = '-';
+        ++iii;
+    }
+    hr[iii] = '\0';
+    std::cout << hr << std::endl;
+#endif
+    
+}
 
+char sid::object_template::__get_vbo_data(sid::vbo* VBO) {
+    
     bool blAllOK = false;
     char chVBOIDOK = 0;
     char chParamsOK = 0;
@@ -66,13 +152,29 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
     char chIndicesOK = 0;
     char chColorsOK = 0;
     char chUVsOK = 0;
+    
+    std::string strModel = "model";
+    std::string strParams = "params";
+    std::string strMesh = "mesh";
+    
+    int vboid;
+    int iPrimitive;
+    int iColorMode;
+    int iNormalsMode;
+    float fScale;
+    
+    sid::t_vertset vertCenter;
+    std::vector<sid::t_vertset> vVertMesh;
+    std::vector<sid::t_index> vIndices;
+    std::vector<sid::t_color> vColors;
+    std::vector<sid::t_uv> vUV;
 
-    sid::sido const* sidoBase = Sidof->at(0);
-
-    this->__get_template_values(sidoBase);
-
-    if (sidoBase->has_child(strModel)) {
-        Sido = &(*sidoBase)[strModel];
+    t_variant varTemp;    
+    
+    sid::sido const* sidoMesh;    
+    
+    if (this->__m_shptrSido->has_child(strModel)) {
+        sidoMesh = &(*this->__m_shptrSido)[strModel];
         blAllOK = true;
     } else {
         blAllOK = false;
@@ -80,8 +182,8 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
     }
 
     if (blAllOK) {
-        if (Sido->has_value("vboid")) {
-            varTemp = Sido->get_value("vboid");
+        if (sidoMesh->has_value("vboid")) {
+            varTemp = sidoMesh->get_value("vboid");
             get_val(vboid, varTemp);
             if (vboid > 0) {
                 chVBOIDOK = 1;
@@ -96,8 +198,8 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
     (chVBOIDOK == 1) ? blAllOK = true : blAllOK = false;
 
     if (blAllOK) {
-        if (Sido->has_child(strParams)) {
-            sid::sido const* sidoParams = &(*Sido)[strParams];
+        if (sidoMesh->has_child(strParams)) {
+            sid::sido const* sidoParams = &(*sidoMesh)[strParams];
 
             chParamsOK = __get_vbo_params(sidoParams,
                     iPrimitive,
@@ -118,9 +220,9 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
     (chParamsOK == 1) ? blAllOK = true : blAllOK = false;
 
     if (blAllOK) {
-        if (Sido->has_child(strMesh)) {
-            sidoMesh = &(*Sido)[strMesh];
-            chVertsOK = __get_vbo_verts(sidoMesh, vboTemp);
+        if (sidoMesh->has_child(strMesh)) {
+            sidoMesh = &(*sidoMesh)[strMesh];
+            chVertsOK = __get_vbo_verts(sidoMesh, VBO);
 
             if (chVertsOK == -1) {
                 std::cerr << "Error: Failed to load mesh vertices." << std::endl;
@@ -129,7 +231,7 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
             (chVertsOK == 1) ? blAllOK = true : blAllOK = false;
 
             if (blAllOK) {
-                chIndicesOK = __get_vbo_indices(sidoMesh, vboTemp);
+                chIndicesOK = __get_vbo_indices(sidoMesh, VBO);
             }
 
             if (chIndicesOK == -1) {
@@ -140,9 +242,9 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
 
             if (blAllOK) {
                 if (iColorMode == 0) {
-                    chColorsOK = __get_vbo_single_color(sidoMesh, vboTemp);
+                    chColorsOK = __get_vbo_single_color(sidoMesh, VBO);
                 } else if (iColorMode == 1) {
-                    chColorsOK = __get_vbo_colors(sidoMesh, vboTemp);
+                    chColorsOK = __get_vbo_colors(sidoMesh, VBO);
                 }
             }
 
@@ -153,7 +255,7 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
             (chColorsOK == 1) ? blAllOK = true : blAllOK = false;
 
             if (blAllOK) {
-                chUVsOK = __get_vbo_uv(sidoMesh, vboTemp);
+                chUVsOK = __get_vbo_uv(sidoMesh, VBO);
             }
 
         } else {
@@ -162,119 +264,36 @@ void sid::object_template::build_template(sid::sidof const* Sidof) {
         }
     }
 
-    for (int iii = 0; iii < vboTemp->get_vertset_size(); ++iii) {
-        std::cout << vboTemp->get_vertset(iii)[0] << ", ";
-        std::cout << vboTemp->get_vertset(iii)[1] << ", ";
-        std::cout << vboTemp->get_vertset(iii)[2] << std::endl;
+    for (int iii = 0; iii < VBO->get_vertset_size(); ++iii) {
+        std::cout << VBO->get_vertset(iii)[0] << ", ";
+        std::cout << VBO->get_vertset(iii)[1] << ", ";
+        std::cout << VBO->get_vertset(iii)[2] << std::endl;
     }
 
-    for (int iii = 0; iii < vboTemp->get_indeces_size(); ++iii) {
-        std::cout << vboTemp->get_index(iii) << std::endl;
+    for (int iii = 0; iii < VBO->get_indeces_size(); ++iii) {
+        std::cout << VBO->get_index(iii) << std::endl;
     }
-    if (vboTemp->is_single_color()) {
-        std::cout << static_cast<int> (vboTemp->get_default_colorset()[0]) << ", ";
-        std::cout << static_cast<int> (vboTemp->get_default_colorset()[1]) << ", ";
-        std::cout << static_cast<int> (vboTemp->get_default_colorset()[2]) << ", ";
-        std::cout << static_cast<int> (vboTemp->get_default_colorset()[3]) << std::endl;
+    if (VBO->is_single_color()) {
+        std::cout << static_cast<int> (VBO->get_default_colorset()[0]) << ", ";
+        std::cout << static_cast<int> (VBO->get_default_colorset()[1]) << ", ";
+        std::cout << static_cast<int> (VBO->get_default_colorset()[2]) << ", ";
+        std::cout << static_cast<int> (VBO->get_default_colorset()[3]) << std::endl;
     } else {
-        for (int iii = 0; iii < vboTemp->get_colors_size(); ++iii) {
-            std::cout << static_cast<int> (vboTemp->get_color(iii)[0]) << ", ";
-            std::cout << static_cast<int> (vboTemp->get_color(iii)[1]) << ", ";
-            std::cout << static_cast<int> (vboTemp->get_color(iii)[2]) << ", ";
-            std::cout << static_cast<int> (vboTemp->get_color(iii)[3]) << std::endl;
+        for (int iii = 0; iii < VBO->get_colors_size(); ++iii) {
+            std::cout << static_cast<int> (VBO->get_color(iii)[0]) << ", ";
+            std::cout << static_cast<int> (VBO->get_color(iii)[1]) << ", ";
+            std::cout << static_cast<int> (VBO->get_color(iii)[2]) << ", ";
+            std::cout << static_cast<int> (VBO->get_color(iii)[3]) << std::endl;
         }
     }
 
-    for (int iii = 0; iii < vboTemp->get_texcoords_size(); ++iii) {
-        std::cout << vboTemp->get_texset(iii)[0] << ", ";
-        std::cout << vboTemp->get_texset(iii)[1] << std::endl;
+    for (int iii = 0; iii < VBO->get_texcoords_size(); ++iii) {
+        std::cout << VBO->get_texset(iii)[0] << ", ";
+        std::cout << VBO->get_texset(iii)[1] << std::endl;
     }
 
-    vboTemp->build_verts_array();
-    vboTemp->make_vbo(GL_STATIC_DRAW);
-    if (vboTemp->is_vbo_complete()) {
-        __m_VBO = vboTemp;
-    }
-}
-
-char sid::object_template::__get_template_values(const sid::sido* ptr) {
-
-    sid::t_variant varTemp;
-    this->__m_strName = ptr->get_name();
-
-    if (ptr->has_value(STR_OBJ_TYPE)) {
-        varTemp = ptr->get_value(STR_OBJ_TYPE);
-        sid::get_val(this->__m_strName, varTemp);
-    } else {
-        
-    }
-
-    if (ptr->has_value(STR_MIN_CREW)) {
-        varTemp = ptr->get_value(STR_MIN_CREW);
-        sid::get_val(this->__m_MinCrew, varTemp);
-    }
-
-    if (ptr->has_value(STR_MAX_CREW)) {
-        varTemp = ptr->get_value(STR_MAX_CREW);
-        sid::get_val(this->__m_MaxCrew, varTemp);
-    }
-
-    if (ptr->has_value(STR_HITPOINTS)) {
-        varTemp = ptr->get_value(STR_HITPOINTS);
-        sid::get_val(this->__m_HitPoints, varTemp);
-    }
-
-    if (ptr->has_value(STR_SHIELDPOINTS)) {
-        varTemp = ptr->get_value(STR_SHIELDPOINTS);
-        sid::get_val(this->__m_ShieldPoints, varTemp);
-    }
-
-    if (ptr->has_value(STR_WEPONS_SLOTS)) {
-        varTemp = ptr->get_value(STR_WEPONS_SLOTS);
-        sid::get_val(this->__m_WeaponsSlots, varTemp);
-    }
-
-    if (ptr->has_value(STR_MASS)) {
-        varTemp = ptr->get_value(STR_MASS);
-        sid::get_val(this->__m_Mass, varTemp);
-    }
-
-    if (ptr->has_value(STR_FORCE)) {
-        varTemp = ptr->get_value(STR_FORCE);
-        sid::get_val(this->__m_Force, varTemp);
-    }
-
-    if (ptr->has_value(STR_TRACTION)) {
-        varTemp = ptr->get_value(STR_TRACTION);
-        sid::get_val(this->__m_Traction, varTemp);
-    }
-
-    if (ptr->has_value(STR_WIDTH)) {
-        varTemp = ptr->get_value(STR_WIDTH);
-        sid::get_val(this->__m_Width, varTemp);
-    }
-
-    if (ptr->has_value(STR_LENGTH)) {
-        varTemp = ptr->get_value(STR_LENGTH);
-        sid::get_val(this->__m_Length, varTemp);
-    }
-
-    if (ptr->has_value(STR_MAX_GRAD)) {
-        varTemp = ptr->get_value(STR_MAX_GRAD);
-        sid::get_val(this->__m_MaxGradient, varTemp);
-    }
-
-    if (ptr->has_value(STR_LAND_ENBALED)) {
-        varTemp = ptr->get_value(STR_LAND_ENBALED);
-        sid::get_val(this->__m_LandEnabled, varTemp);
-    }
-
-    if (ptr->has_value(STR_WATER_ENABLED)) {
-        varTemp = ptr->get_value(STR_WATER_ENABLED);
-        sid::get_val(this->__m_WaterEnabled, varTemp);
-    }
-    
-    
+    VBO->build_verts_array();
+    VBO->make_vbo(GL_STATIC_DRAW);
 }
 
 char sid::object_template::__get_vbo_params(sid::sido const* ptr,

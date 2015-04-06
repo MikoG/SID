@@ -54,8 +54,10 @@ namespace sid {
         //
         // -------------------------------------------------------------- 
         
-        inline static void add_template(uint pos, sid::sidof const* Sidof) {
-            _s_Templates.add_template(pos, Sidof);
+        inline static void add_template(uint pos, 
+                std::shared_ptr<sid::sido const> Sido) {
+            
+            _s_Templates.add_template(pos, Sido);
         }
         
         inline static void clear_templates() {

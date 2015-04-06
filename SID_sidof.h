@@ -187,6 +187,15 @@ namespace sid {
                     " does not exist in object '" + this->get_name() +
                     "'.");
         }
+        
+        /**@brief Returns the number of child nodes attached to the 
+         * current node.
+         * 
+         * @return Returns a value of type std::size_t.
+         */
+        inline std::size_t const size() const {
+            return (this->__m_Nodes.size());
+        }        
 
         /**@brief Test for a child node with given name.
          * 
@@ -211,14 +220,14 @@ namespace sid {
          * @return Returns a pointer to the child node, nullptr is returned if
          * %pos is greater than the position of the last node.
          */        
-        U const* at(std::size_t const pos) const {
-            U const* uRet;
+        std::shared_ptr<U const> at(std::size_t const pos) const {
+            std::shared_ptr<U const> uRet;
             int iii = 0;
             for (_t_objConstIter itObject = this->__m_Nodes.begin();
                     itObject != this->__m_Nodes.end();
                     itObject++) {
                 if (iii == pos) {
-                    uRet = &**itObject;
+                    uRet = *itObject;
                     itObject = this->__m_Nodes.end();
                 }
                 iii++;
@@ -740,7 +749,7 @@ namespace sid {
          * @return Returns true if %basic_object child with name of @a id
          * exists. Otherwise returns false.
          */
-        inline sido const* at(std::size_t const pos) const {
+        inline std::shared_ptr<sido const> at(std::size_t const pos) const {
             return (this->__m_Objects.at(pos));
         }
 

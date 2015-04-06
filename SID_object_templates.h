@@ -18,8 +18,8 @@ namespace sid {
         object_templates(const object_templates& orig);
         virtual ~object_templates();
         
-        inline void add_template(uint pos, sid::sidof const* Sidof) {
-            this->__m_vTemplates[pos] = sid::object_template(Sidof);
+        inline void add_template(uint pos, std::shared_ptr<sid::sido const> Sido) {
+            this->__m_vTemplates[pos] = sid::object_template(Sido);
         }
         
         inline void clear_templates() {

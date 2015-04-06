@@ -2,7 +2,7 @@
 <configurationDescriptor version="95">
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Debug" type="1">
+    <conf name="Debug" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <platform>2</platform>
@@ -13,6 +13,8 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>
@@ -38,7 +40,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="Release" type="1">
+    <conf name="Release" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <platform>2</platform>
@@ -61,11 +63,11 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>/home/geth2k/NetBeansProjects/COO/dist/Release/GNU-Linux-x86/COO</runcommandpicklistitem>
-          <runcommandpicklistitem>/home/geth2k/NetBeansProjects/COO/dist/Release/GNU-Linux-x86/coo</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/geth2k/NetBeansProjects/COO/dist/Release/GNU-Linux-x86/coo</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}"</runcommand>
-        <rundir></rundir>
+        <runcommand>/home/geth2k/NetBeansProjects/COO/dist/Release/GNU-Linux-x86/coo</runcommand>
+        <rundir>/home/geth2k/NetBeansProjects/COO</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
